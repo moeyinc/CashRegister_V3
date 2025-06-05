@@ -34,9 +34,10 @@ export default function ReceiptContainer(props) {
 	});
 
 	const handleCheckout = () => {
-		dispatch(setCheckout(false));
-		dispatch(clearAllItems());
-		dispatch(resetPayment());
+		// dispatch(setCheckout(false));
+		// dispatch(clearAllItems());
+		// dispatch(resetPayment());
+		window.location.reload()
 	};
 
 	const handleCancel = () => {

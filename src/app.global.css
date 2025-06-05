@@ -1,3 +1,15 @@
+body {
+	overflow: hidden;
+}
+
+img {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: row;
@@ -192,7 +204,7 @@
 
 .cart-item {
 	margin-top: 8px;
-	margin-left: 30px;
+	margin-left: 20px;
 	
 }
 
@@ -267,7 +279,7 @@
 
 #cart-item-name {
 	position: absolute;
-	margin-left: 90px;
+	margin-left: 40px;
 	width: 200px;
 }
 

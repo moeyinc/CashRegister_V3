@@ -1,5 +1,5 @@
 
-export const CMS_URL = "http://18.233.241.104:1337";
+export const CMS_URL = "http://18.233.241.104:1340";
 export const API_KEY =
 	"0616bc2a8ca119ecc943963b6521cd5ecc9fa864b2804c7261eab117719f2048ad1206c4e4e5dd7a915b877e0ada82ef9187fc4e4f7966703bed2e92c78883fe7a211c208f789607ce838d8693314b48a243e95630e5b016eafefe591f061616d087e35692497d83b1d0772fe2da71981cf2255048f9efdca09d584274348ecb";
 
@@ -36,6 +36,36 @@ export const tabColors = [
 	},
 	{
 		id: 5,
+		background: "#d8d6ec",
+		color: "#99069d",
+	},
+	{
+		id: 6,
+		background: "#fffac0",
+		color: "#cc9b0a",
+	},
+	{
+		id: 7,
+		background: "#ffead0",
+		color: "#ff3301",
+	},
+	{
+		id: 8,
+        background: '#fce3ee',
+		color: "#fe126f",
+	},
+	{
+		id: 9,
+		background: "#f1f9d7",
+		color: "#36ce3b",
+	},
+	{
+		id: 10,
+		background: "#dff2f7",
+		color: "#1972cf",
+	},
+	{
+		id: 11,
 		background: "#d8d6ec",
 		color: "#99069d",
 	},
