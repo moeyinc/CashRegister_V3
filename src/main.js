@@ -12,15 +12,15 @@ const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		x: 0,
 		y: 0,
-		width: 2048,
-		height: 768,
+		width: 640,
+		height: 480,
         frame: false,
     	
 		webPreferences: {
 			preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
 		},
 	});
-
+	mainWindow.setSize(2048,768);
 	// and load the index.html of the app.
 	mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 	//mainWindow.setBounds({width: 2048})

@@ -16,12 +16,13 @@ export default function Product(props) {
 
 	document.addEventListener("keydown", (e) => {
 		if (e.key == "Enter") {
-			if (code.length >= 11) {
-				//	console.log(code)
+			if (code.length >= 1) {
 				if (code == barcode) {
+				        console.log(code)
 					setAdded(true);
 				}
 			}
+			code = '';
 		}
 
 		if (e.key != "Shift" && e.key != "Enter") {
@@ -84,7 +85,7 @@ export default function Product(props) {
 		}
 	}, [id, image]);
 
-	return (
+	if (image !== undefined) return (
 		<button className="product-card" onClick={() => add()}>
 			<img
 				src={Img ? Img : localStorage.getItem(`img-${id}`)}
