@@ -40,7 +40,6 @@ export default function ProductContainer(props) {
 											category.attributes.Name ==
 											product.attributes.category.data.attributes.Name
 											&& product.attributes.Name
-											&& product.attributes.Image.data 
 											&& product.attributes.Price
 											&& product.attributes.Barcode 
 											&& product.attributes.localizations.data[0]
@@ -51,7 +50,7 @@ export default function ProductContainer(props) {
 													id={product.id}
 													name={product.attributes.Name}
 													ESname={product.attributes.localizations.data[0].attributes.Name}
-													image={ 'thumbnail' in product.attributes.Image.data.attributes ? `${CMS_URL}${product.attributes.Image.data.attributes.formats.thumbnail.url}` : `${CMS_URL}${product.attributes.Image.data.attributes.url}`}
+													image={ product.attributes.Image.data?.attributes === undefined ? undefined : 'thumbnail' in product.attributes.Image.data?.attributes ? `${CMS_URL}${product.attributes.Image.data?.attributes?.formats?.thumbnail?.url}` : `${CMS_URL}${product.attributes.Image.data?.attributes?.url}` }
 													price={product.attributes.Price}
 													barcode={product.attributes.Barcode}
 												/>

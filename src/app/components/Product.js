@@ -84,7 +84,7 @@ export default function Product(props) {
 			fetchImage(image);
 		}
 	}, [id, image]);
-		return (
+		if (image !== undefined) return (
 			<button className="product-card" onClick={() => add()}>
 				<img
 					src={Img ? Img : localStorage.getItem(`img-${id}`)}
