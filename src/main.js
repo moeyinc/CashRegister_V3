@@ -12,8 +12,8 @@ const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		x: 0,
 		y: 0,
-		width: 1024,
-		height: 768,
+		width: 640,
+		height: 480,
         frame: false,
     	
 		webPreferences: {
@@ -21,10 +21,11 @@ const createWindow = () => {
 		},
 	});
 
+	mainWindow.setSize(2048,768);
 	// and load the index.html of the app.
 	mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 	//mainWindow.setBounds({width: 2048})
-	mainWindow.setFullScreen(true);
+	//mainWindow.setFullScreen(true);
 
 	// Open the DevTools.
 	// mainWindow.webContents.openDevTools();
