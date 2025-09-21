@@ -16,6 +16,7 @@ export default function Product(props) {
 
 	document.addEventListener("keydown", (e) => {
 		if (e.key == "Enter") {
+			e.preventDefault();
 			if (code.length >= 11) {
 				//	console.log(code)
 				if (code == barcode) {

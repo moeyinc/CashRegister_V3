@@ -9,7 +9,8 @@ export default function ProductContainer(props) {
 	const [key, setKey] = useState(0);
 	const { locale } = useSelector((state) => state.cart);
 
-
+	console.log(products);
+	console.log(categories);
 	return (
 		<div className="product-container">
 			<Tabs defaultActiveKey={key} onSelect={(k) => setKey(k)} fill>
@@ -50,7 +51,7 @@ export default function ProductContainer(props) {
 													id={product.id}
 													name={product.attributes.Name}
 													ESname={product.attributes.localizations.data[0].attributes.Name}
-													image={`${CMS_URL}${product.attributes.Image.data.attributes.formats.thumbnail.url}`}
+													image={ product.attributes.Image.data?.attributes === undefined ? undefined : 'thumbnail' in product.attributes.Image.data?.attributes ? `${CMS_URL}${product.attributes.Image.data?.attributes?.formats?.thumbnail?.url}` : `${CMS_URL}${product.attributes.Image.data?.attributes?.url}` }
 													price={product.attributes.Price}
 													barcode={product.attributes.Barcode}
 												/>
