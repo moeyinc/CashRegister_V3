@@ -35,6 +35,10 @@ const createWindow = () => {
 		app.quit();
 	});
 	
+        mainWindow.webContents.on('crashed', (e) => {
+                app.relaunch();
+                app.quit()
+        });
 	
 	/*	mainWindow2 = new BrowserWindow({
 		x: 0,
@@ -62,6 +66,11 @@ const createWindow = () => {
 };
 
 app.disableHardwareAcceleration();
+app.commandLine.appendSwitch('disable-gpu');
+app.commandLine.appendSwitch('disable-software-rasterizer');
+app.commandLine.appendSwitch('disable-gpu-compositing');
+app.commandLine.appendSwitch('disable-gpu-rasterization');
+app.commandLine.appendSwitch('disable-gpu-sandbox');
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
