@@ -39,4 +39,34 @@ export const tabColors = [
 		background: "#d8d6ec",
 		color: "#99069d",
 	},
+	{
+		id: 6,
+		background: "#fffac0",
+		color: "#cc9b0a",
+	},
+	{
+		id: 7,
+		background: "#ffead0",
+		color: "#ff3301",
+	},
+	{
+		id: 8,
+        background: '#fce3ee',
+		color: "#fe126f",
+	},
+	{
+		id: 9,
+		background: "#f1f9d7",
+		color: "#36ce3b",
+	},
+	{
+		id: 10,
+		background: "#dff2f7",
+		color: "#1972cf",
+	},
+	{
+		id: 11,
+		background: "#d8d6ec",
+		color: "#99069d",
+	},
 ];

@@ -163,9 +163,6 @@ export default function MainPage(props) {
 				<div className="header">
 					<img src={bgTop} alt="bg" id="bgTop" />
 				</div>
-				<button className="language-button" onClick={() => ChangeLanguage()}>
-					{buttonText}
-				</button>
 				<div className="body">
 					<ProductContainer
 						locale={locale}
